@@ -1,462 +1,454 @@
 const gameData = {
     "1": {
-        "text": "You’re about to set out on a long journey with your companions. Before you leave, you pack one last thing for the road. What do you prioritize?",
-        "image": "smaller_images/snackies.png",
+        "text": "A brilliant star appears in the night sky. Something about it feels like an invitation. You're joining a group to follow it. What do you bring?",
+        "image": "smaller_images/nightfalls.png",
         "choices": {
-            "Practical supplies (water, bread, and a plan)": [2, ["Tomato", "Potato"]],
-            "A small gift to share with strangers": [2, ["Green Bean", "Pumpkin"]],
-            "A written reminder of your purpose": [2, ["Broccoli", "Napa Cabbage"]],
-            "A bold choice that says, “We’ll be fine”": [2, ["Jalapeno", "Bok Choy"]]
+            "Bread and water - practical things that keep people alive": [2, ["Potato", "Tomato", "Onion"]],
+            "A small gift - something to offer strangers": [2, ["Green Bean", "Pumpkin"]],
+            "A journal - to remember what you see": [2, ["Broccoli", "Leek"]],
+            "Just yourself - traveling light means traveling free": [2, ["Jalapeno", "Napa Cabbage"]]
         }
     },
     "2": {
-        "text": "At the edge of the road, you must choose your first route. Where do you lead the group?",
+        "text": "Your group gathers at dawn. The road splits four ways. A merchant suggests one path, a shepherd another. Which way?",
         "image": "smaller_images/where_to.png",
         "choices": {
-            "Along the shoreline (the breeze feels safe)": [3, ["Onion", "Green Bean", "Bok Choy"]],
-            "To a quiet place of scrolls and learning": [4, ["Broccoli", "Tomato", "Leek", "Carrot"]],
-            "To a friend’s house to regroup and plan": [5, ["Pumpkin", "Potato", "Napa Cabbage"]],
-            "Up into the hills to get perspective": [6, ["Garlic", "Jalapeno"]]
+            "The valley road - well-traveled and safe": [3, ["Potato", "Onion"]],
+            "The hill path - harder, but closer to the star": [4, ["Jalapeno", "Garlic", "Broccoli"]],
+            "The river route - slower, but the water guides you": [5, ["Pumpkin", "Napa Cabbage"]],
+            "Straight into the wilderness - the star points that way": [6, ["Jalapeno", "Garlic"]]
         }
     },
+
+    // ========== VALLEY PATH ==========
     "3": {
-        "text": "You arrive by the water. The crowd is loud, the day is bright, and your companions look to you. What do you do first?",
-        "image": "smaller_images/at_beach.png",
+        "text": "The valley road is wide and easy. By midday, you pass a woman sitting alone by a well, face in her hands.",
+        "image": "smaller_images/dandelion.png",
         "choices": {
-            "Gather everyone and set a clear direction": [41, ["Garlic"]],
-            "Make sure everyone is fed and included": [41, ["Green Bean", "Bok Choy", "Pumpkin"]],
-            "Observe carefully and look for what others miss": [41, ["Leek", "Carrot"]],
-            "Find a quiet moment to reflect and think": [41, ["Broccoli", "Tomato"]]
+            "Stop and ask if she needs help": [31, ["Green Bean", "Pumpkin"]],
+            "Leave food nearby and keep moving": [31, ["Onion", "Potato"]],
+            "Keep walking - the group is moving ahead": [31, ["Tomato"]],
+            "Tell the group to wait while you sit with her": [31, ["Pumpkin", "Napa Cabbage", "Carrot"]]
         }
     },
-    "41": {
-        "text": "For a moment, everything feels peaceful. Then you notice something: the mood of your group is shifting. What thought rises first in your mind?",
-        "image": "smaller_images/having_beach_fun.png",
+    "31": {
+        "text": "Her son is sick. She's walked two days to find a healer and has none left to give. Your group is getting restless. 'We should keep moving,' someone mutters.",
+        "image": "smaller_images/dandelion.png",
         "choices": {
-            "“I’m grateful—let’s keep everyone steady.”": [7, ["Garlic", "Napa Cabbage"]],
-            "“This is a chance to bring people together.”": [7, ["Green Bean", "Bok Choy", "Pumpkin", "Tomato"]],
-            "“Something feels off—let’s stay alert.”": [7, ["Leek", "Carrot"]],
-            "“We should be ready for unexpected danger.”": [7, ["Broccoli", "Onion"]]
+            "Offer to help her, even if it delays everyone": [7, ["Pumpkin", "Green Bean"]],
+            "Give her directions and supplies, then catch up": [7, ["Potato", "Onion"]],
+            "Encourage her with words, then continue on": [7, ["Napa Cabbage", "Tomato"]],
+            "Ask the group to vote": [7, ["Broccoli", "Green Bean"]]
         }
     },
     "7": {
-        "text": "Suddenly, everything changes. A shadow falls, the world turns dark, and you’re swept away before you can react…",
-        "image": "smaller_images/beach_disaster.png",
+        "text": "The afternoon sun beats down. Ahead, a village - but the streets are empty. The doors are shut. Something is wrong.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
             "Continue": [8, []]
         }
     },
     "8": {
-        "text": "You regain your senses in a cramped storage room. Footsteps pass outside. You need to move—fast. What’s your first move?",
-        "image": "smaller_images/in_pantry.png",
+        "text": "An old man emerges. 'Soldiers took everything,' he says. 'We have nothing left.' He pauses. 'Unless... you've come to help?'",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Act immediately and force an exit": [9, ["Jalapeno"]],
-            "Move carefully and plan each step": [9, ["Tomato", "Potato"]],
-            "Listen to the one person with a strong instinct": [19, ["Carrot"]]
+            "\"We'll share what we can.\"": [9, ["Green Bean", "Pumpkin"]],
+            "\"Tell us what happened.\"": [9, ["Broccoli", "Carrot"]],
+            "\"We're just passing through. We'll pray for you.\"": [49, ["Tomato", "Napa Cabbage"]]
         }
     },
     "9": {
-        "text": "The window won’t open. Your group looks at you. What do you choose?",
-        "image": "smaller_images/window_locked.png",
+        "text": "The villagers haven't eaten in two days. An argument breaks out - one traveler insists you need your food for the road. What do you do?",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Take an alternate route you can’t fully see yet": [19, ["Napa Cabbage", "Tomato", "Potato"]],
-            "Work the problem patiently until it gives": [48, ["Carrot", "Broccoli", "Onion"]],
-            "Make noise and break through—consequences later": [55, ["Jalapeno", "Green Bean"]]
+            "\"We give what we have. Somehow there will be enough.\"": [48, ["Green Bean", "Pumpkin", "Napa Cabbage"]],
+            "\"Half for them, half for us.\"": [48, ["Broccoli", "Potato"]],
+            "\"We need our supplies. We'll send help later.\"": [55, ["Tomato", "Potato"]]
         }
     },
     "48": {
-        "text": "It works—the window finally gives. You’re out… but not safe yet. What now?",
-        "image": "smaller_images/window_jump.png",
+        "text": "You share your food. An elderly woman presses a small clay lamp into your hand. 'For the dark roads ahead,' she whispers.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Jump without hesitation": [49, ["Jalapeno", "Garlic", "Broccoli"]],
-            "Check for a safe landing first": [49, ["Leek", "Tomato", "Napa Cabbage"]],
-            "Ask someone else to go first": [49, ["Potato"]]
+            "Accept it gratefully": [49, ["Pumpkin", "Green Bean"]],
+            "Try to refuse - they need it more": [49, ["Onion", "Potato"]],
+            "Thank her and promise to use it well": [49, ["Broccoli", "Leek"]]
         }
     },
     "55": {
-        "text": "You force your way out with a loud crash. You’re free—but you’ve drawn attention. How do you respond?",
-        "image": "smaller_images/breaking_window.png",
+        "text": "Your group leaves with full packs but heavy hearts. 'Did we do the right thing?' someone asks.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Stay calm and think clearly": [49, ["Tomato"]],
-            "Move fast and lead everyone out": [49, ["Broccoli", "Garlic"]],
-            "Keep spirits up—don’t let fear win": [49, ["Pumpkin", "Green Bean", "Bok Choy"]]
+            "\"We made the hard choice.\"": [49, ["Tomato", "Potato"]],
+            "\"I don't know. But we keep going.\"": [49, ["Broccoli", "Napa Cabbage"]],
+            "\"We'll make it right. We'll send help back.\"": [49, ["Green Bean", "Carrot"]]
         }
     },
     "49": {
-        "text": "A strange doorway opens—and reality shifts. You’re somewhere you don’t understand. Your group needs a way forward. What’s your approach?",
-        "image": "smaller_images/corn_space.png",
+        "text": "Night falls. Around the fire, people share stories - where they're from, why they're following the star.",
+        "image": "smaller_images/nightfalls.png",
         "choices": {
-            "Try the obvious control first and see what happens": [10, ["Bok Choy"]],
-            "Test carefully and gather information as you go": [10, ["Onion", "Green Bean"]]
+            "Share your own story": [10, ["Green Bean", "Jalapeno"]],
+            "Listen more than you speak": [10, ["Leek", "Broccoli"]],
+            "Ask others what they hope to find": [10, ["Carrot", "Tomato"]]
         }
     },
     "10": {
-        "text": "Your choice launches you into motion. You can’t control everything, but you can choose how you respond.",
-        "image": "smaller_images/space_travel.png",
+        "text": "A child tugs your sleeve. 'What if the star leads nowhere?' she whispers. 'What if we're lost?'",
+        "image": "smaller_images/nightfalls.png",
         "choices": {
-            "Stay calm and trust there’s a purpose": [43, ["Napa Cabbage"]],
-            "Worry quietly, but keep going anyway": [43, ["Potato", "Broccoli"]],
-            "Look for patterns and clues to guide you": [43, ["Leek"]]
+            "\"God wouldn't lead us this far just to leave us lost.\"": [43, ["Napa Cabbage", "Broccoli"]],
+            "\"Even if we don't know where it leads, we have each other.\"": [43, ["Green Bean", "Pumpkin"]],
+            "\"Being scared is okay. I am too, sometimes.\"": [43, ["Carrot", "Leek"]],
+            "Sit with her quietly until she feels better": [43, ["Pumpkin", "Napa Cabbage"]]
         }
     },
     "43": {
-        "text": "“Where are we?” someone asks. Your group is waiting for you to decide the next step.",
-        "image": "smaller_images/space_confusion.png",
+        "text": "You wake to shouting. Torches approaching in the darkness. Soldiers? Bandits? The group looks to you.",
+        "image": "smaller_images/nightfalls.png",
         "choices": {
-            "Act fast—try something and see what opens": [11, ["Jalapeno", "Onion"]],
-            "Search for guidance and understand the situation": [39, ["Leek", "Tomato", "Broccoli"]],
-            "Gather the group and give a steady plan": [39, ["Garlic"]]
+            "\"Everyone hide. Stay quiet.\"": [11, ["Broccoli", "Potato"]],
+            "\"Let's approach calmly. Running looks suspicious.\"": [39, ["Jalapeno", "Green Bean", "Garlic"]],
+            "\"Protect the children. Everyone else, form a line.\"": [39, ["Garlic", "Onion", "Carrot"]]
         }
     },
     "11": {
-        "text": "In the chaos, a strange light appears. Your companions look to you, startled.",
-        "image": "smaller_images/glowing_space_orb.png",
+        "text": "You crouch in the shadows. The torches stop nearby. 'Travelers!' a voice calls. 'We're shepherds - we saw your fire. Do you need help?'",
+        "image": "smaller_images/nightfalls.png",
         "choices": {
-            "Stay gentle and calm the fear": [42, ["Potato", "Napa Cabbage"]],
-            "Protect the group and seek cover": [42, ["Onion"]],
-            "Step forward with confidence": [42, ["Bok Choy"]]
-        }
-    },
-    "42": {
-        "text": "A messenger appears—unexpected help. You have a moment to respond before you’re moved again.",
-        "image": "smaller_images/glowing_popcorn.png",
-        "choices": {
-            "Accept help quietly": [12, ["Potato"]],
-            "Celebrate with your friends": [12, ["Pumpkin", "Green Bean", "Jalapeno"]],
-            "Ask how you can make things right": [12, ["Onion", "Carrot"]]
+            "Step out and greet them": [39, ["Green Bean", "Jalapeno"]],
+            "Accept their kindness cautiously": [39, ["Broccoli", "Potato"]],
+            "Call back: \"Who's asking?\"": [39, ["Carrot", "Garlic"]]
         }
     },
     "39": {
-        "text": "You find guidance and make a plan. Now you must choose how to act on it.",
-        "image": "smaller_images/spaceplan.png",
+        "text": "The shepherds share what they know: 'The road ahead is blocked. Soldiers have a checkpoint. You'll need another way.'",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Act boldly—time matters": [40, ["Jalapeno", "Green Bean", "Broccoli"]],
-            "Double-check details before committing": [40, ["Broccoli", "Carrot"]],
-            "Let someone else take the risky step": [40, ["Potato"]],
-            "Invite everyone to commit together": [40, ["Napa Cabbage", "Green Bean"]]
+            "\"Is there a path around?\"": [40, ["Tomato", "Broccoli"]],
+            "\"Could one of you guide us?\"": [40, ["Pumpkin", "Green Bean"]],
+            "\"We'll figure it out.\"": [40, ["Jalapeno", "Garlic"]],
+            "\"Then we wait.\"": [40, ["Broccoli", "Potato"]]
         }
     },
     "40": {
-        "text": "Right before the moment of action, someone panics. The whole group hesitates. How do you respond?",
-        "image": "smaller_images/pull_lever.png",
+        "text": "A young shepherd speaks up. 'I know a hidden path. I could show you... but I'd have to leave my flock.'",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Own the fear out loud so others feel less alone": [44, ["Pumpkin", "Green Bean", "Carrot"]],
-            "Re-explain the plan and steady everyone": [44, ["Onion", "Broccoli"]],
-            "Step back and let another lead this moment": [44, ["Potato", "Tomato"]],
-            "Comfort them first, then move forward": [44, ["Green Bean", "Napa Cabbage"]]
+            "\"Just point us the right direction.\"": [42, ["Tomato", "Potato"]],
+            "\"Come with us. Your flock will be fine.\"": [42, ["Jalapeno", "Green Bean"]],
+            "\"What if some of us stay to watch your flock?\"": [42, ["Onion", "Carrot"]],
+            "\"Stay with what matters to you.\"": [42, ["Pumpkin", "Napa Cabbage"]]
+        }
+    },
+    "42": {
+        "text": "The shepherds share bread from their packs. For a moment, strangers feel like family. 'May you find what you're seeking,' one says.",
+        "image": "smaller_images/placeholder.png",
+        "choices": {
+            "\"I hope so too.\"": [44, ["Napa Cabbage", "Pumpkin"]],
+            "\"Maybe we already have.\"": [44, ["Leek", "Broccoli"]],
+            "\"We'll carry your kindness with us.\"": [44, ["Green Bean", "Carrot"]]
         }
     },
     "44": {
-        "text": "At last, you reach a safe place. The crisis is over—but you are changed by it. What do you do first?",
-        "image": "smaller_images/backhome.png",
+        "text": "Morning. The crisis has passed. The road is clear. Your group gathers, lighter than before but somehow stronger.",
+        "image": "smaller_images/another_day.png",
         "choices": {
-            "Celebrate loudly and let joy spill out": [13, ["Bok Choy", "Jalapeno"]],
-            "Find a quiet place to recover": [13, ["Potato"]],
-            "Gather people and tell the story": [13, ["Garlic"]],
-            "Care for yourself first—your body is tired": [13, ["Pumpkin"]]
+            "\"Let's move. The star is still there.\"": [12, ["Tomato", "Jalapeno"]],
+            "\"Let's take a moment to give thanks.\"": [12, ["Napa Cabbage", "Broccoli"]],
+            "\"Does anyone need rest first?\"": [12, ["Onion", "Pumpkin"]]
         }
     },
     "12": {
-        "text": "The moment passes, and you find yourself safe again. Your group waits for your next move.",
-        "image": "smaller_images/backhome.png",
+        "text": "The hills grow taller, the air cooler. You're getting closer. The star seems brighter every night.",
+        "image": "smaller_images/evergetable_climb.png",
         "choices": {
-            "Replay what happened and hunt for meaning": [13, ["Bok Choy", "Leek"]],
-            "Feel everything—relief and tears included": [13, ["Napa Cabbage"]],
-            "Celebrate together and debrief out loud": [13, ["Tomato", "Jalapeno", "Carrot", "Broccoli"]],
-            "Take a quiet breath and recover": [13, ["Pumpkin", "Leek"]]
+            "\"I think we're almost there.\"": [19, ["Jalapeno", "Green Bean"]],
+            "\"Stay alert. We don't know what's ahead.\"": [19, ["Broccoli", "Carrot"]],
+            "\"Whatever happens, I'm glad I came.\"": [19, ["Pumpkin", "Leek"]]
         }
     },
+
+    // ========== HILLS PATH ==========
     "4": {
-        "text": "You enter a quiet room of scrolls and stories. What draws you in first?",
-        "image": "smaller_images/which_book.png",
+        "text": "The shepherd's path winds upward. The going is slow, but the star seems closer here. By afternoon, the trail forks.",
+        "image": "smaller_images/base_evergetable.png",
         "choices": {
-            "A story of loyalty and kindness": [15, ["Napa Cabbage", "Pumpkin"]],
-            "A long, thoughtful work that rewards patience": [15, ["Broccoli"]],
-            "A mystery you can’t leave unsolved": [15, ["Leek", "Carrot"]],
-            "Practical wisdom for daily life": [15, ["Onion"]]
+            "Take the steeper path - harder but faster": [15, ["Jalapeno", "Tomato"]],
+            "Take the gentler path - safer for everyone": [15, ["Pumpkin", "Onion"]],
+            "Ask the group which way": [15, ["Broccoli", "Green Bean"]]
         }
     },
     "15": {
-        "text": "A few gatherings are happening nearby. Which do you join?",
-        "image": "smaller_images/bookstore_activities.png",
+        "text": "You reach a cave where an old hermit lives. He offers shelter. 'Few come this way,' he says. 'What brings you?'",
+        "image": "smaller_images/cave.png",
         "choices": {
-            "A discussion where everyone shares and listens": [16, ["Green Bean", "Pumpkin"]],
-            "A challenge that rewards courage and curiosity": [16, ["Jalapeno", "Leek"]],
-            "A storytelling circle where words shape hearts": [16, ["Onion", "Bok Choy", "Carrot"]]
+            "\"We're following the star. Do you know what it means?\"": [16, ["Leek", "Broccoli"]],
+            "\"We're searching for something. We're not sure what.\"": [16, ["Napa Cabbage", "Potato"]],
+            "\"Just travelers. Thank you for the shelter.\"": [16, ["Tomato", "Onion"]]
         }
     },
     "16": {
-        "text": "As you step back outside, the world shifts—like a storm you didn’t see coming. Your group is swept into chaos.",
-        "image": "smaller_images/vortex.png",
+        "text": "The hermit stirs his fire. 'I've watched that star for weeks. Those who follow it... they don't come back the same.'",
+        "image": "smaller_images/cave.png",
         "choices": {
-            "Accept the moment and keep your head": [17, ["Potato", "Green Bean", "Tomato"]],
-            "Freeze with worry and hope it passes": [17, ["Napa Cabbage"]],
-            "Hold people together—literally and emotionally": [17, ["Broccoli", "Onion", "Carrot"]],
-            "Lean into the unknown with courage": [17, ["Jalapeno", "Pumpkin"]]
+            "\"What do you mean?\"": [17, ["Leek", "Carrot"]],
+            "\"We should rest.\"": [17, ["Potato", "Onion"]],
+            "\"Will you share a story with us?\"": [17, ["Green Bean", "Pumpkin"]]
         }
     },
     "17": {
-        "text": "The storm stops. It’s cold. Quiet. You’re in a sealed place and you need a way out.",
-        "image": "smaller_images/in_fridge.png",
+        "text": "You wake to find the hermit gone - but he's left a gift by the entrance: a walking stick with strange markings.",
+        "image": "smaller_images/cave.png",
         "choices": {
             "Continue": [50, []]
         }
     },
     "50": {
-        "text": "Time matters. How do you try to get free?",
-        "image": "smaller_images/in_fridge.png",
+        "text": "The trail grows treacherous. One of your companions stumbles - badly twisted ankle. They can't walk.",
+        "image": "smaller_images/evergetable_climb.png",
         "choices": {
-            "Wait, watch, and move at the right moment": [18, ["Broccoli", "Pumpkin"]],
-            "Rally everyone and push together": [18, ["Jalapeno", "Bok Choy"]],
-            "Look for the mechanism and outsmart it": [18, ["Onion", "Leek"]],
-            "Follow the group and stay steady": [18, ["Potato"]]
+            "\"We stop. No one gets left behind.\"": [18, ["Pumpkin", "Garlic"]],
+            "\"Let's make a splint. We go together, slowly.\"": [18, ["Onion", "Broccoli"]],
+            "\"I'll stay with them. The rest go ahead.\"": [18, ["Potato", "Napa Cabbage"]],
+            "\"Who can carry them?\"": [18, ["Jalapeno", "Green Bean"]]
         }
     },
     "18": {
-        "text": "You’re out—but still not safe. How do you escape the building?",
-        "image": "smaller_images/out_fridge.png",
+        "text": "You reach the summit. The view steals your breath - valleys below, villages glittering, and the star impossibly bright ahead.",
+        "image": "smaller_images/evergetable_climb.png",
         "choices": {
-            "Take the boldest route available": [19, ["Jalapeno"]],
-            "Move quietly and avoid attention": [19, ["Tomato", "Leek"]],
-            "Take a risky shortcut": [9, ["Onion", "Bok Choy"]]
+            "\"It's beautiful. Worth everything.\"": [19, ["Leek", "Pumpkin"]],
+            "\"That's where we're heading. Let's go.\"": [19, ["Jalapeno", "Tomato"]],
+            "\"Is everyone alright? Let's rest.\"": [19, ["Onion", "Green Bean"]]
         }
     },
-    "19": {
-        "text": "The doorway leads to unfamiliar territory. Your group needs direction. What do you do first?",
-        "image": "smaller_images/cheeseland.png",
-        "choices": {
-            "Take care of immediate needs before anything else": [20, ["Onion", "Green Bean"]],
-            "Scout ahead and understand the terrain": [20, ["Leek", "Broccoli"]],
-            "Ask the group and build unity": [20, ["Napa Cabbage", "Green Bean", "Pumpkin"]]
-        }
-    },
-    "20": {
-        "text": "A local leader confronts you. The wrong answer could make things worse. What do you say?",
-        "image": "smaller_images/mad_gouda.png",
-        "choices": {
-            "Speak boldly and try to win them over": [21, ["Onion", "Potato", "Jalapeno", "Green Bean"]],
-            "Apologize quickly and ask for a peaceful path forward": [21, ["Pumpkin", "Leek"]]
-        }
-    },
-    "21": {
-        "text": "You’re brought before someone powerful. You need their help. How do you present yourself?",
-        "image": "smaller_images/cheese_castle.png",
-        "choices": {
-            "Approach with humility and calm respect": [22, ["Napa Cabbage", "Pumpkin"]],
-            "Be direct and ask clearly for what you need": [22, ["Jalapeno", "Potato"]],
-            "Use words and humor to disarm the room": [22, ["Bok Choy", "Onion", "Broccoli"]]
-        }
-    },
-    "22": {
-        "text": "You can’t read the reaction in the room. Do you change course or push through?",
-        "image": "smaller_images/performance.png",
-        "choices": {
-            "Push through with confidence": [51, ["Bok Choy", "Garlic", "Carrot"]],
-            "Pause and reassess carefully": [51, ["Tomato", "Leek"]],
-            "Stay steady and keep your peace": [51, ["Napa Cabbage", "Broccoli"]]
-        }
-    },
-    "51": {
-        "text": "The leader considers you and asks a simple question: “What do you miss the most about home?”",
-        "image": "smaller_images/happy_king.png",
-        "choices": {
-            "Peace, fresh air, and quiet": [23, ["Jalapeno", "Potato", "Napa Cabbage"]],
-            "People—relationships and community": [23, ["Leek", "Green Bean", "Carrot"]],
-            "Family warmth and care": [23, ["Pumpkin"]],
-            "Purpose—learning and growing": [23, ["Bok Choy", "Broccoli"]]
-        }
-    },
-    "23": {
-        "text": "Help is offered. On the way back, you can choose one final stop. What do you pick?",
-        "image": "smaller_images/boat.png",
-        "choices": {
-            "A place to think and plan for what’s next": [24, ["Tomato", "Onion", "Leek"]],
-            "A place to rest, heal, and gather people": [25, ["Potato", "Napa Cabbage", "Green Bean", "Pumpkin", "Carrot"]],
-            "A place to explore the unknown": [26, ["Jalapeno", "Onion", "Broccoli"]]
-        }
-    },
-    "24": {
-        "text": "You arrive at your stop. What do you do there?",
-        "image": "smaller_images/mushroom.png",
-        "choices": {
-            "Make a plan and prepare wisely": [27, ["Tomato", "Carrot"]],
-            "Gather courage and take initiative": [27, ["Bok Choy", "Carrot"]],
-            "Do something kind for your companions": [27, ["Napa Cabbage", "Green Bean"]],
-            "Stay focused on the mission—home matters": [27, ["Potato", "Garlic"]]
-        }
-    },
-    "25": {
-        "text": "You arrive at your stop. How do you use this time?",
+
+    // ========== RIVER PATH ==========
+    "5": {
+        "text": "The river path winds through green valleys. Easy walking. By midday, children are playing by the bank, throwing stones.",
         "image": "smaller_images/dandelion.png",
         "choices": {
-            "Strengthen friendships and encourage the group": [27, ["Green Bean", "Carrot", "Bok Choy"]],
-            "Offer hospitality and care to others": [27, ["Napa Cabbage", "Onion", "Pumpkin"]],
-            "Check details and make sure the plan holds": [27, ["Tomato", "Garlic", "Leek"]]
-        }
-    },
-    "26": {
-        "text": "You arrive at your stop. What do you do?",
-        "image": "smaller_images/forgetmenot.png",
-        "choices": {
-            "Explore and lead into the unknown": [27, ["Garlic", "Leek"]],
-            "Care for the group and keep spirits steady": [27, ["Napa Cabbage", "Green Bean"]],
-            "Stay practical—get back to the goal": [27, ["Tomato", "Potato"]],
-            "Encourage courage and joy in others": [27, ["Jalapeno", "Pumpkin", "Carrot", "Carrot"]]
-        }
-    },
-    "27": {
-        "text": "You return home. What do you do first?",
-        "image": "smaller_images/backhome.png",
-        "choices": {
-            "Celebrate with bold joy": [13, ["Jalapeno"]],
-            "Rest and recover quietly": [13, ["Pumpkin"]],
-            "Gather the community and tell the story": [13, ["Napa Cabbage", "Green Bean"]],
-            "Serve and encourage your closest friends": [13, ["Pumpkin", "Garlic", "Carrot"]]
-        }
-    },
-    "13": {
-        "text": "Last question. After everything, what’s your next step the following morning?",
-        "image": "smaller_images/another_day.png",
-        "choices": {
-            "Seek wisdom and quietly prepare": [0, ["Napa Cabbage", "Potato", "Carrot"]],
-            "Return to your responsibilities with focus": [0, ["Tomato", "Leek"]],
-            "Serve others and strengthen the community": [0, ["Pumpkin", "Green Bean", "Garlic"]],
-            "Step out again with courage": [0, ["Jalapeno", "Bok Choy"]]
-        }
-    },
-    "5": {
-        "text": "You arrive at a friend’s home. This is a safe moment to plan. How do you spend it?",
-        "image": "smaller_images/at_apartment.png",
-        "choices": {
-            "Encourage someone and build them up": [28, ["Carrot", "Pumpkin"]],
-            "Keep things light and help people relax": [28, ["Bok Choy", "Potato"]],
-            "Talk strategy and prepare for what’s next": [28, ["Tomato", "Garlic"]],
-            "Listen closely—relationships matter": [28, ["Napa Cabbage"]]
+            "Stop and play with them": [28, ["Green Bean", "Jalapeno"]],
+            "Wave and smile as you pass": [28, ["Pumpkin", "Napa Cabbage"]],
+            "Ask where their parents are": [28, ["Onion", "Carrot"]],
+            "Keep your eyes on the path": [28, ["Tomato", "Broccoli"]]
         }
     },
     "28": {
-        "text": "Someone steps away and you hear a sudden cry out. Your group freezes. How do you react?",
-        "image": "smaller_images/apartment.png",
+        "text": "A child runs up. 'Are you following the star? My grandmother says something important is coming.' He looks at you. 'Are you important people?'",
+        "image": "smaller_images/dandelion.png",
         "choices": {
-            "React big—let everyone know this is serious": [45, ["Bok Choy", "Carrot"]],
-            "Call out and move toward the sound": [45, ["Green Bean", "Garlic"]],
-            "Worry quietly and look for the safest next step": [45, ["Tomato", "Pumpkin", "Onion"]]
+            "\"We're just travelers. But maybe that's important too.\"": [45, ["Napa Cabbage", "Broccoli"]],
+            "\"We don't know yet.\"": [45, ["Potato", "Leek"]],
+            "Laugh. \"What do you think?\"": [45, ["Jalapeno", "Green Bean"]],
+            "\"Important things aren't always about important people.\"": [45, ["Pumpkin", "Carrot"]]
         }
     },
     "45": {
-        "text": "There’s no response. You need to decide how to move.",
-        "image": "smaller_images/no_response.png",
+        "text": "The children lead you to their village. An ancient grandmother meets you. 'Sit. Eat. Then tell me about this star.'",
+        "image": "smaller_images/at_apartment.png",
         "choices": {
-            "Lead from the front": [29, ["Broccoli", "Garlic"]],
-            "Stay close to the group and keep unity": [29, ["Napa Cabbage", "Green Bean"]],
-            "Hang back and avoid risk": [29, ["Tomato", "Pumpkin", "Carrot"]]
+            "Sit and share everything": [29, ["Green Bean", "Pumpkin"]],
+            "Ask what she thinks first": [29, ["Broccoli", "Carrot"]],
+            "Politely decline - you should keep moving": [29, ["Tomato", "Potato"]]
         }
     },
     "29": {
-        "text": "You reach the room. Something is wrong. Where do you look first?",
-        "image": "smaller_images/room.png",
+        "text": "The grandmother grips your hand. 'I've lived ninety years. This star feels like a beginning.' She whispers: 'Don't give up.'",
+        "image": "smaller_images/at_apartment.png",
         "choices": {
-            "Step back and think first": [30, ["Tomato"]],
-            "Look for small clues and details": [30, ["Leek"]],
-            "Check the most suspicious place immediately": [30, ["Broccoli"]],
-            "Call for help and protect others": [30, ["Carrot", "Garlic"]]
+            "Thank her and hold her words close": [30, ["Napa Cabbage", "Pumpkin"]],
+            "Ask for her blessing": [30, ["Broccoli", "Leek"]],
+            "Promise to return and tell her what you find": [30, ["Green Bean", "Carrot"]]
         }
     },
     "30": {
-        "text": "Before you can act, darkness falls again and you’re swept away.",
-        "image": "smaller_images/beach_disaster.png",
+        "text": "Morning. A young man approaches. 'I want to see what's beyond these hills. Can I come with you?'",
+        "image": "smaller_images/another_day.png",
         "choices": {
-            "Fight to protect others": [46, ["Onion"]],
-            "Call out and lead through fear": [46, ["Garlic"]],
-            "Feel the weight of it—and keep going": [46, ["Tomato", "Pumpkin"]],
-            "Freeze and hope it ends": [46, ["Potato"]]
+            "\"Of course. The more the better.\"": [46, ["Green Bean", "Pumpkin"]],
+            "\"It won't be easy. Are you sure?\"": [46, ["Tomato", "Broccoli"]],
+            "\"Ask your family first. We'll wait.\"": [46, ["Napa Cabbage", "Onion"]],
+            "\"We barely know you. Why should we trust you?\"": [46, ["Carrot", "Potato"]]
         }
     },
     "46": {
-        "text": "Light returns. You’re trapped and pressed in tight space. How do you get free?",
-        "image": "smaller_images/grocery_bag.png",
+        "text": "Trouble ahead - the river has flooded the trail. A shaky log bridge offers one way across. The long way around costs half a day.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Work together with force": [31, ["Garlic", "Onion"]],
-            "Look for a small weakness and exploit it": [31, ["Green Bean"]],
-            "Use bold effort to break through": [31, ["Broccoli", "Jalapeno"]]
+            "\"We cross. Carefully, one at a time.\"": [56, ["Jalapeno", "Garlic"]],
+            "\"We take the long way. Safety first.\"": [56, ["Potato", "Onion"]],
+            "\"I'll test it first.\"": [56, ["Jalapeno", "Green Bean"]],
+            "\"Can we make this safer?\"": [56, ["Broccoli", "Carrot"]]
         }
     },
-    "31": {
-        "text": "You’re free for a moment, but danger is close. What do you do?",
-        "image": "smaller_images/grocery_bag_out.png",
+    "56": {
+        "text": "You make it across - wet, tired, but together. The star hangs low ahead. You're getting close.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Freeze and hope it passes": [32, ["Pumpkin", "Potato", "Napa Cabbage"]],
-            "Use bold distraction to create space": [32, ["Jalapeno", "Bok Choy"]],
-            "Move fast and lead others to safety": [32, ["Garlic", "Carrot", "Broccoli"]]
+            "Press on with new energy": [32, ["Jalapeno", "Tomato"]],
+            "Catch your breath": [32, ["Potato", "Broccoli"]],
+            "Gather the group for encouragement": [32, ["Garlic", "Green Bean"]]
         }
     },
     "32": {
-        "text": "You find a temporary hiding place. What’s your next move?",
-        "image": "smaller_images/hiding.png",
+        "text": "On the plain, you spot another group - also following the star. Better equipped. Moving faster.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Take the route that requires planning and patience": [49, ["Carrot", "Broccoli", "Tomato"]],
-            "Sprint for the exit and trust your instincts": [49, ["Jalapeno", "Onion"]]
+            "\"Let's catch them. Strength in numbers.\"": [19, ["Green Bean", "Garlic"]],
+            "\"Let them go. We'll arrive when we arrive.\"": [19, ["Pumpkin", "Potato"]],
+            "\"Let's try to talk to them.\"": [19, ["Tomato", "Carrot"]]
         }
     },
+
+    // ========== WILDERNESS PATH ==========
     "6": {
-        "text": "You head into the hills. At the base of the climb, your group pauses. What do you do?",
-        "image": "smaller_images/base_evergetable.png",
+        "text": "No paths. No markers. Just open land under endless sky. The star is your only guide. Some are already questioning the choice.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Survey the path and plan wisely": [33, ["Tomato", "Broccoli"]],
-            "Encourage everyone and strengthen courage": [33, ["Bok Choy", "Green Bean", "Garlic"]],
-            "Take in the view and remember your purpose": [33, ["Carrot"]]
+            "\"Trust the journey.\"": [33, ["Napa Cabbage", "Jalapeno"]],
+            "\"If anyone wants to turn back, now's the time.\"": [33, ["Broccoli", "Potato"]],
+            "\"We take turns navigating. We're in this together.\"": [33, ["Green Bean", "Garlic"]]
         }
     },
     "33": {
-        "text": "Night falls. Do you rest or keep going?",
-        "image": "smaller_images/nightfalls.png",
+        "text": "Third night. An abandoned campsite - cold fire pit, scattered supplies, torn tent. Someone was here before you.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Seek shelter and regroup": [34, ["Leek", "Pumpkin", "Tomato"]],
-            "Press on with determination": [36, ["Bok Choy", "Garlic"]]
+            "Search for clues": [34, ["Leek", "Carrot"]],
+            "Gather useful supplies": [36, ["Potato", "Onion"]],
+            "Say a prayer for whoever was here": [34, ["Napa Cabbage", "Pumpkin"]],
+            "Keep moving - this place feels wrong": [36, ["Tomato", "Jalapeno"]]
         }
     },
     "34": {
-        "text": "In the shelter, your group must decide how to endure the night. What do you lead with?",
-        "image": "smaller_images/cave.png",
+        "text": "You find a journal. Last entry: 'The star grows brighter. We're close. But something is following us.' The next page is blank.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Gather resources and prepare": [37, ["Carrot", "Tomato"]],
-            "Organize the group and keep them steady": [37, ["Garlic"]],
-            "Tell stories that build courage and unity": [37, ["Green Bean"]],
-            "Think ahead and map the next steps": [37, ["Broccoli"]]
+            "\"We need to be careful.\"": [37, ["Broccoli", "Carrot"]],
+            "\"They made it further. So can we.\"": [37, ["Jalapeno", "Tomato"]],
+            "\"Should we try to find them?\"": [37, ["Green Bean", "Pumpkin"]],
+            "Keep the journal": [37, ["Leek", "Broccoli"]]
         }
     },
     "36": {
-        "text": "You keep climbing, but the group needs a pause. What do you choose?",
-        "image": "smaller_images/evergetable_climb.png",
+        "text": "The supplies include water and dried meat. As you pack them, a noise in the darkness.",
+        "image": "smaller_images/nightfalls.png",
         "choices": {
-            "Pause and breathe—peace matters": [37, ["Napa Cabbage"]],
-            "Push forward—momentum matters": [37, ["Jalapeno"]],
-            "Feed and care for the group": [37, ["Green Bean"]],
-            "Check in with each person": [37, ["Broccoli", "Napa Cabbage", "Garlic"]]
+            "Call out: \"Who's there?\"": [37, ["Green Bean", "Jalapeno"]],
+            "Grab something to defend yourself": [37, ["Onion", "Garlic"]],
+            "Stay still and listen": [37, ["Broccoli", "Leek"]],
+            "Wake the others quietly": [37, ["Potato", "Carrot"]]
         }
     },
     "37": {
-        "text": "After a long climb, you reach the summit. For a moment, you see everything clearly. Then the world shifts again…",
-        "image": "smaller_images/vortex.png",
+        "text": "Just a fox. The wilderness is full of small frights. Morning brings cultivated land - farms, roads, signs of life.",
+        "image": "smaller_images/another_day.png",
         "choices": {
             "Continue": [38, []]
         }
     },
     "38": {
-        "text": "You land in unfamiliar territory again. Your group needs direction—fast. What do you do?",
-        "image": "smaller_images/cheeseland.png",
+        "text": "A farmer waves you over. 'Star-followers! You're the third group this week!' He offers water and shade.",
+        "image": "smaller_images/placeholder.png",
         "choices": {
-            "Scout and explore quickly": [20, ["Leek", "Jalapeno"]],
-            "Head toward the nearest settlement": [20, ["Onion", "Napa Cabbage", "Carrot"]],
-            "Ask the group and build agreement": [20, ["Broccoli", "Green Bean", "Napa Cabbage"]],
-            "Lead decisively and keep everyone moving": [20, ["Garlic"]]
+            "Accept gratefully": [19, ["Pumpkin", "Napa Cabbage"]],
+            "Ask about the other groups": [19, ["Leek", "Carrot"]],
+            "\"Which way did they go?\"": [19, ["Tomato", "Jalapeno"]],
+            "Help with his work in exchange": [19, ["Onion", "Potato"]]
+        }
+    },
+
+    // ========== SHARED FINAL SECTION ==========
+    "19": {
+        "text": "The final stretch. The star hangs just above a distant ridge. Then you see it: a checkpoint ahead. Soldiers stopping travelers.",
+        "image": "smaller_images/placeholder.png",
+        "choices": {
+            "\"Let me do the talking.\"": [20, ["Garlic", "Jalapeno"]],
+            "\"We approach together.\"": [20, ["Green Bean", "Pumpkin"]],
+            "\"Is there a way around?\"": [20, ["Broccoli", "Potato"]],
+            "\"Stay calm. We have nothing to hide.\"": [20, ["Napa Cabbage", "Tomato"]]
+        }
+    },
+    "20": {
+        "text": "A soldier stops you. 'What business here?' He looks tired. 'Strange travelers all week, following some star.' He squints. 'That what you're doing?'",
+        "image": "smaller_images/placeholder.png",
+        "choices": {
+            "\"Yes. We're seeking what it leads to.\"": [21, ["Jalapeno", "Leek"]],
+            "\"We're pilgrims. Passing through peacefully.\"": [21, ["Napa Cabbage", "Pumpkin"]],
+            "\"Just travelers. Curious about the world.\"": [21, ["Tomato", "Broccoli"]]
+        }
+    },
+    "21": {
+        "text": "The soldier nods. 'I've thought about following it myself.' He waves you through. 'If you find what you're looking for - remember those who couldn't come.'",
+        "image": "smaller_images/placeholder.png",
+        "choices": {
+            "\"Come with us. It's not too late.\"": [22, ["Green Bean", "Jalapeno"]],
+            "\"We'll remember. Thank you.\"": [22, ["Pumpkin", "Napa Cabbage"]],
+            "\"Maybe one day you'll follow your own star.\"": [22, ["Tomato", "Carrot"]]
+        }
+    },
+    "22": {
+        "text": "The final ridge. The star blazes directly overhead, brighter than you've ever seen. You reach the top and look down into a small valley. A humble stable. And then you hear it - a baby crying.",
+        "image": "smaller_images/nightfalls.png",
+        "choices": {
+            "Rush forward": [51, ["Jalapeno", "Green Bean"]],
+            "Stand and take it in": [51, ["Leek", "Broccoli"]],
+            "Look at your companions and smile": [51, ["Pumpkin", "Green Bean"]],
+            "Fall to your knees": [51, ["Napa Cabbage", "Onion"]]
+        }
+    },
+    "51": {
+        "text": "The stable is warm. Simple. A young mother holds an infant. The star seems to rest directly above. You don't fully understand - but you know you were meant to be here.",
+        "image": "smaller_images/placeholder.png",
+        "choices": {
+            "\"We found it.\"": [23, ["Jalapeno", "Green Bean"]],
+            "Stay silent": [23, ["Napa Cabbage", "Broccoli"]],
+            "Embrace whoever is beside you": [23, ["Pumpkin", "Green Bean"]],
+            "Whisper a prayer": [23, ["Napa Cabbage", "Leek"]]
+        }
+    },
+    "23": {
+        "text": "Dawn breaks. Soon you'll decide what's next - stay, return home, or go somewhere new. But first, one question.",
+        "image": "smaller_images/another_day.png",
+        "choices": {
+            "Continue": [24, []]
+        }
+    },
+    "24": {
+        "text": "An elder asks: 'What will you carry home from this journey? What changed in you?'",
+        "image": "smaller_images/another_day.png",
+        "choices": {
+            "\"The journey matters as much as the destination.\"": [27, ["Broccoli", "Leek"]],
+            "\"I learned to trust others - and myself.\"": [27, ["Pumpkin", "Green Bean"]],
+            "\"Courage isn't the absence of fear.\"": [27, ["Jalapeno", "Carrot"]],
+            "\"I'm still figuring that out.\"": [27, ["Potato", "Napa Cabbage"]]
+        }
+    },
+    "27": {
+        "text": "The sun rises. A new day. Your group prepares to leave. One more moment under the fading star.",
+        "image": "smaller_images/another_day.png",
+        "choices": {
+            "Make a promise about how you'll live differently": [13, ["Tomato", "Broccoli"]],
+            "Say goodbye to the star": [13, ["Leek", "Pumpkin"]],
+            "Look ahead, ready for what's next": [13, ["Jalapeno", "Garlic"]],
+            "Look back, honoring the journey": [13, ["Pumpkin", "Napa Cabbage"]]
+        }
+    },
+    "13": {
+        "text": "Home again - or wherever home is now. The star has faded but something remains. What do you do first?",
+        "image": "smaller_images/backhome.png",
+        "choices": {
+            "Find a quiet place to pray and reflect": [0, ["Napa Cabbage", "Broccoli"]],
+            "Return to your responsibilities with new purpose": [0, ["Tomato", "Onion"]],
+            "Gather your loved ones and share what happened": [0, ["Green Bean", "Garlic"]],
+            "Start planning the next journey": [0, ["Jalapeno", "Leek"]]
         }
     }
-
-
 };
 
-// --- Bible character results (v1 text-only cards) ---
+// --- Bible character results ---
 const characterIds = [
     "Moses",
     "David",
@@ -507,11 +499,11 @@ const characterCard = {
     },
     David: {
         subtitle: "Bold heart and honest worship",
-        description: "You’re courageous and expressive. You take action, but you also feel deeply—and you learn through both victories and mistakes."
+        description: "You're courageous and expressive. You take action, but you also feel deeply—and you learn through both victories and mistakes."
     },
     Esther: {
         subtitle: "Courage in the right moment",
-        description: "You’re brave when it matters most. You notice what’s at stake, and you’re willing to speak up to protect others."
+        description: "You're brave when it matters most. You notice what's at stake, and you're willing to speak up to protect others."
     },
     Ruth: {
         subtitle: "Loyal and steadfast",
@@ -523,15 +515,15 @@ const characterCard = {
     },
     Joseph: {
         subtitle: "Resilient and strategic",
-        description: "You keep going even after setbacks. You’re practical, patient, and able to turn hardship into something meaningful."
+        description: "You keep going even after setbacks. You're practical, patient, and able to turn hardship into something meaningful."
     },
     Peter: {
         subtitle: "Loyal and outspoken",
-        description: "You’re passionate and committed. You may act quickly, but your heart is in the right place—and you grow through the journey."
+        description: "You're passionate and committed. You may act quickly, but your heart is in the right place—and you grow through the journey."
     },
     Paul: {
         subtitle: "Driven and persuasive",
-        description: "You’re focused and mission-minded. You value truth, clarity, and helping others see the bigger picture."
+        description: "You're focused and mission-minded. You value truth, clarity, and helping others see the bigger picture."
     },
     MaryMotherOfJesus: {
         subtitle: "Faithful and humble",
@@ -539,16 +531,15 @@ const characterCard = {
     },
     MaryMagdalene: {
         subtitle: "Devoted and courageous witness",
-        description: "You stay close through hard moments. You’re brave, loyal, and willing to be the first to speak truth when others hesitate."
+        description: "You stay close through hard moments. You're brave, loyal, and willing to be the first to speak truth when others hesitate."
     },
     Martha: {
         subtitle: "Practical and hospitable",
-        description: "You take care of what needs doing. You serve, organize, and protect the people you love—even when you’re stressed."
+        description: "You take care of what needs doing. You serve, organize, and protect the people you love—even when you're stressed."
     }
 };
 
-// Map the original scoring tags to Bible character IDs.
-// (This lets us keep the existing branching + scoring lists while changing the final results to 11 characters.)
+// Map the scoring tags to Bible character IDs
 const scoreTagToCharacter = {
     "Garlic": "Moses",
     "Jalapeno": "David",
@@ -561,7 +552,7 @@ const scoreTagToCharacter = {
     "Napa Cabbage": "MaryMotherOfJesus",
     "Leek": "MaryMagdalene",
     "Onion": "Martha",
-    "Bok Choy": "David" // merged into David to keep 11 result buckets
+    "Bok Choy": "David"
 };
 
 const personalities = Object.fromEntries(characterIds.map(id => [id, 0]));
@@ -588,7 +579,24 @@ function renderState(state) {
             button.textContent = choice;
             button.className = 'choice-button';
             let nextState = info[0];
-            button.onclick = () => changeState(nextState, info[1]); //each time you change state you update the personalities dictionary
+            button.onclick = () => changeState(nextState, info[1]);
+            choicesContainer.appendChild(button);
+        }
+    };
+    
+    img.onerror = () => {
+        // If image fails to load, still show the content
+        storyImage.style.display = 'none';
+        choicesContainer.style.display = 'flex';
+        storyText.textContent = gameData[state].text;
+        choicesContainer.innerHTML = '';
+
+        for (const [choice, info] of Object.entries(gameData[state].choices)) {
+            const button = document.createElement('button');
+            button.textContent = choice;
+            button.className = 'choice-button';
+            let nextState = info[0];
+            button.onclick = () => changeState(nextState, info[1]);
             choicesContainer.appendChild(button);
         }
     };
@@ -596,7 +604,6 @@ function renderState(state) {
 
 
 function changeState(newState, selectedPersonalities) { 
-    // console.log(personalities); 
     selectedPersonalities.forEach(tag => {
         const characterId = scoreTagToCharacter[tag];
         if (!characterId) return;
@@ -634,7 +641,7 @@ function revealResult() {
     const meta = characterCard[maxCharacterId] ?? { subtitle: "", description: "" };
     const imagePath = characterImage[maxCharacterId];
 
-    // Build image HTML if artwork exists (check by trying to load it)
+    // Build image HTML if artwork exists
     const imgElement = new Image();
     imgElement.src = imagePath;
     imgElement.onload = () => {
@@ -660,7 +667,7 @@ function revealResult() {
     shareButton.textContent = 'Copy share link';
     shareButton.className = 'choice-button';
     shareButton.onclick = () => {
-        const shareMessage = `I got “${displayName}” in the Bible Character quiz. Try it: https://jared912.github.io/Bible-Quiz-V2/`;
+        const shareMessage = `I got "${displayName}" in the Bible Character quiz. Try it: https://jared912.github.io/Bible-Quiz-V2/`;
         navigator.clipboard.writeText(shareMessage).then(() => {
             alert('Copied!');
         }).catch(() => {
