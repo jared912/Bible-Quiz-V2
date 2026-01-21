@@ -1,0 +1,12 @@
+﻿# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+
+# Node (if added later)
+node_modules/
