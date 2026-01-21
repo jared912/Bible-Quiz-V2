@@ -485,6 +485,21 @@ const characterDisplayName = {
     Martha: "Martha"
 };
 
+// Character images - add artwork here as images/characters/{CharacterId}.png
+const characterImage = {
+    Moses: "images/characters/Moses.png",
+    David: "images/characters/David.png",
+    Esther: "images/characters/Esther.png",
+    Ruth: "images/characters/Ruth.png",
+    Daniel: "images/characters/Daniel.png",
+    Joseph: "images/characters/Joseph.png",
+    Peter: "images/characters/Peter.png",
+    Paul: "images/characters/Paul.png",
+    MaryMotherOfJesus: "images/characters/MaryMotherOfJesus.png",
+    MaryMagdalene: "images/characters/MaryMagdalene.png",
+    Martha: "images/characters/Martha.png"
+};
+
 const characterCard = {
     Moses: {
         subtitle: "Leader and deliverer",
@@ -617,9 +632,21 @@ function revealResult() {
 
     const displayName = characterDisplayName[maxCharacterId] ?? maxCharacterId;
     const meta = characterCard[maxCharacterId] ?? { subtitle: "", description: "" };
+    const imagePath = characterImage[maxCharacterId];
+
+    // Build image HTML if artwork exists (check by trying to load it)
+    const imgElement = new Image();
+    imgElement.src = imagePath;
+    imgElement.onload = () => {
+        const imgContainer = document.getElementById('result-image');
+        if (imgContainer) {
+            imgContainer.innerHTML = `<img src="${imagePath}" alt="${displayName}" class="result-character-image">`;
+        }
+    };
 
     text.innerHTML = `
       <div class="result-card">
+        <div id="result-image" class="result-image-container"></div>
         <div class="result-title">You are: ${displayName}</div>
         <div class="result-subtitle">${meta.subtitle}</div>
         <p class="result-body">${meta.description}</p>
@@ -633,11 +660,11 @@ function revealResult() {
     shareButton.textContent = 'Copy share link';
     shareButton.className = 'choice-button';
     shareButton.onclick = () => {
-        const shareMessage = `I got “${displayName}” in the Bible Character quiz. Try it: https://jared912.github.io/Bible-Quiz/`;
+        const shareMessage = `I got “${displayName}” in the Bible Character quiz. Try it: https://jared912.github.io/Bible-Quiz-V2/`;
         navigator.clipboard.writeText(shareMessage).then(() => {
             alert('Copied!');
         }).catch(() => {
-            alert('Could not copy automatically. You can manually share: https://jared912.github.io/Bible-Quiz/');
+            alert('Could not copy automatically. You can manually share: https://jared912.github.io/Bible-Quiz-V2/');
         });
     };
 
